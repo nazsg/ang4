@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Cat } from './naz.component';
 
 @Component({
   selector: 'app-root',
@@ -19,3 +19,5 @@ export class AppComponent {
  }
 
 }
+let pet = new Cat(11,4, 'Chloie');
+console.log(pet.eat());

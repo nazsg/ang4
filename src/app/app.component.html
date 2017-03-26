@@ -1,3 +1,25 @@
 <h1>
   {{title}}
 </h1>
+<hr>
+<app-servers></app-servers>
+<hr>
+<!-- <input type="text"
+   [(ngModel)]="name"
+>
+<p>{{name}}</p> -->
+
+
+<button
+   class="btn btn-primary" (click)="onToggleDetails()"
+>Display Details</button>
+<p
+   *ngIf="showSecret"
+>Secret Password = tuna</p>
+<div
+   *ngFor="let logItem of log; let i = index"
+   [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+   [ngClass]="{'white-text': i >= 4}"
+> {{ logItem }}
+
+</div>
